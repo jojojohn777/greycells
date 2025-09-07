@@ -12,64 +12,80 @@ document.addEventListener('DOMContentLoaded', function () {
     footer.parentNode.insertBefore(mainContent, footer);
   }
 
-  // Path prefix configuration for different file types
-  const pathPrefix = {
-    'css': {
-      'MainPath': '/assets/pagestyles',
-      'BLOG': [''],
-      'CONTACT': ['contact.css'],
-      'HOME': ['home.css'],
-      'PORTFOLIO': ['portfolio.css'],
-      'HOW IT WORKS': ['how-it-works.css'],
-      'LOG IN': ['login.css']
-    },
-    'html': {
-      'MainPath': '/',
-      'BLOG': ['blog.html'],
-      'CONTACT': ['contact.html'],
-      'HOME': ['home.html'],
-      'PORTFOLIO': ['portfolio.html'],
-      'HOW IT WORKS': ['how-it-works.html'],
-      'LOG IN': ['login.html']
-    },
-    'js': {
-      'MainPath': '/assets/scripts',
-      'BLOG': ['blog.js'],
-      'CONTACT': ['contact.js'],
-      'HOME': ['home.js'],
-      'PORTFOLIO': ['portfolio.js'],
-      'HOW IT WORKS': ['how-it-works.js'],
-      'LOG IN': ['login.js']
-    }
-  };
+ // Detect if running on GitHub Pages
+const repoName = "greycells"; // <-- change to your repo name
+const isGitHubPages = window.location.hostname.includes("github.io");
 
-  // Navigation mapping - maps nav text to page configurations
-  const navigationMap = {
-    'CONTACT': {
-      html: 'contact.html',
-      page: 'CONTACT'
-    },
-    'HOW IT WORKS': {
-      html: 'how-it-works.html',
-      page: 'HOW IT WORKS'
-    },
-    'PORTFOLIO': {
-      html: 'portfolio.html',
-      page: 'PORTFOLIO'
-    },
-    'BLOG': {
-      html: 'blog.html',
-      page: 'BLOG'
-    },
-    'LOG IN': {
-      html: 'login.html',
-      page: 'LOG IN'
-    },
-    'HOME': {
-      html: 'home.html',
-      page: 'HOME'
-    }
-  };
+// Function to build paths correctly
+function makePath(base, file) {
+  if (isGitHubPages) {
+    // Serve from https://username.github.io/repoName/...
+    return `/${repoName}/${base}/${file}`;
+  } else {
+    // Local relative path (./assets/...)
+    return `.${base}/${file}`;
+  }
+}
+
+// Path prefix configuration for different file types
+const pathPrefix = {
+  css: {
+    MainPath: isGitHubPages ? `/${repoName}/assets/pagestyles` : "./assets/pagestyles",
+    BLOG: [""],
+    CONTACT: ["contact.css"],
+    HOME: ["home.css"],
+    PORTFOLIO: ["portfolio.css"],
+    "HOW IT WORKS": ["how-it-works.css"],
+    "LOG IN": ["login.css"]
+  },
+  html: {
+    MainPath: isGitHubPages ? `/${repoName}/` : "./",
+    BLOG: ["blog.html"],
+    CONTACT: ["contact.html"],
+    HOME: ["home.html"],
+    PORTFOLIO: ["portfolio.html"],
+    "HOW IT WORKS": ["how-it-works.html"],
+    "LOG IN": ["login.html"]
+  },
+  js: {
+    MainPath: isGitHubPages ? `/${repoName}/assets/scripts` : "./assets/scripts",
+    BLOG: ["blog.js"],
+    CONTACT: ["contact.js"],
+    HOME: ["home.js"],
+    PORTFOLIO: ["portfolio.js"],
+    "HOW IT WORKS": ["how-it-works.js"],
+    "LOG IN": ["login.js"]
+  }
+};
+
+// Navigation mapping - maps nav text to page configurations
+const navigationMap = {
+  CONTACT: {
+    html: "contact.html",
+    page: "CONTACT"
+  },
+  "HOW IT WORKS": {
+    html: "how-it-works.html",
+    page: "HOW IT WORKS"
+  },
+  PORTFOLIO: {
+    html: "portfolio.html",
+    page: "PORTFOLIO"
+  },
+  BLOG: {
+    html: "blog.html",
+    page: "BLOG"
+  },
+  "LOG IN": {
+    html: "login.html",
+    page: "LOG IN"
+  },
+  HOME: {
+    html: "home.html",
+    page: "HOME"
+  }
+};
+
 
   // Track loaded CSS files to avoid duplicates
   const loadedCSS = new Set();
