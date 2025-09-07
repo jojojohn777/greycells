@@ -12,39 +12,43 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Detect if running on GitHub Pages
-  const repoName = "greycells"; // <-- change to your repo name
-  const isGitHubPages = window.location.hostname.includes("github.io");
+// Detect if running on GitHub Pages or local
+const repoName = "greycells";
+const isGithub = window.location.hostname.includes("github.io");
 
-  // Path prefix configuration for different file types
-  const pathPrefix = {
-    css: {
-      MainPath: isGitHubPages ? `/${repoName}/assets/pagestyles` : "./assets/pagestyles",
-      BLOG: [""],
-      CONTACT: ["contact.css"],
-      HOME: ["home.css"],
-      PORTFOLIO: ["portfolio.css"],
-      "HOW IT WORKS": ["how-it-works.css"],
-      "LOG IN": ["login.css"]
-    },
-    html: {
-      MainPath: isGitHubPages ? `/${repoName}/` : "./",
-      BLOG: ["blog.html"],
-      CONTACT: ["contact.html"],
-      HOME: ["home.html"],
-      PORTFOLIO: ["portfolio.html"],
-      "HOW IT WORKS": ["how-it-works.html"],
-      "LOG IN": ["login.html"]
-    },
-    js: {
-      MainPath: isGitHubPages ? `/${repoName}/assets/scripts` : "./assets/scripts",
-      BLOG: ["blog.js"],
-      CONTACT: ["contact.js"],
-      HOME: ["home.js"],
-      PORTFOLIO: ["portfolio.js"],
-      "HOW IT WORKS": ["how-it-works.js"],
-      "LOG IN": ["login.js"]
-    }
-  };
+// Base path
+const basePath = isGithub ? `/${repoName}` : "";
+
+// Path prefix configuration for different file types
+const pathPrefix = {
+  css: {
+    MainPath: `${basePath}/assets/pagestyles`,
+    BLOG: [""],
+    CONTACT: ["contact.css"],
+    HOME: ["home.css"],
+    PORTFOLIO: ["portfolio.css"],
+    "HOW IT WORKS": ["how-it-works.css"],
+    "LOG IN": ["login.css"]
+  },
+  html: {
+    MainPath: `${basePath}/`,
+    BLOG: ["blog.html"],
+    CONTACT: ["contact.html"],
+    HOME: ["home.html"],
+    PORTFOLIO: ["portfolio.html"],
+    "HOW IT WORKS": ["how-it-works.html"],
+    "LOG IN": ["login.html"]
+  },
+  js: {
+    MainPath: `${basePath}/assets/scripts`,
+    BLOG: ["blog.js"],
+    CONTACT: ["contact.js"],
+    HOME: ["home.js"],
+    PORTFOLIO: ["portfolio.js"],
+    "HOW IT WORKS": ["how-it-works.js"],
+    "LOG IN": ["login.js"]
+  }
+};
 
   // Navigation mapping - maps nav text to page configurations
   const navigationMap = {
@@ -217,3 +221,4 @@ document.addEventListener('DOMContentLoaded', function () {
     return Promise.all([loadPageCSS(pageConfig.page), loadPageJS(pageConfig.page)]);
   };
 });
+``
