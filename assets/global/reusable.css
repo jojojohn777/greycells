@@ -1,0 +1,276 @@
+/* home.css - Page specific styles */
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Default background for largest screens */
+    background-image: url('https://cdn.decorilla.com/images/5200/ad2994c4-85a1-4343-8794-574df63375fc/Decorilla-online-interior-design-services.jpeg?cv=1');
+}
+
+.hero-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--bg-overlay);
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    color: var(--white);
+    font-size: 4.5rem;
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: var(--spacing-2xl);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-cta {
+    margin-bottom: var(--spacing-3xl);
+}
+
+.hero-cta .btn {
+    padding: var(--spacing-lg) var(--spacing-3xl);
+    font-size: var(--fs-lg);
+    font-weight: 600;
+}
+
+/* Forbes Badge */
+.forbes-badge {
+    position: absolute;
+    bottom: var(--spacing-2xl);
+    left: var(--spacing-2xl);
+    background-color: var(--white);
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-xl);
+    text-align: center;
+    min-width: 80px;
+}
+
+.badge-number {
+    font-size: var(--fs-3xl);
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1;
+    margin-bottom: var(--spacing-xs);
+}
+
+.badge-text {
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive Background Images */
+@media (max-width: 149px) {
+    .hero-background {
+        background-image: url('https://cdn.decorilla.com/images/5200/ad2994c4-85a1-4343-8794-574df63375fc/Decorilla-online-interior-design-services.jpeg?cv=1&crop=1040%2C2913%2C2080%2C0&width=149');
+    }
+}
+
+@media (min-width: 150px) and (max-width: 297px) {
+    .hero-background {
+        background-image: url('https://cdn.decorilla.com/images/5200/ad2994c4-85a1-4343-8794-574df63375fc/Decorilla-online-interior-design-services.jpeg?cv=1&crop=2080%2C2913%2C1560%2C0&width=297');
+    }
+}
+
+@media (min-width: 298px) and (max-width: 446px) {
+    .hero-background {
+        background-image: url('https://cdn.decorilla.com/images/5200/ad2994c4-85a1-4343-8794-574df63375fc/Decorilla-online-interior-design-services.jpeg?cv=1&crop=3120%2C2913%2C1040%2C0&width=446');
+    }
+}
+
+@media (min-width: 447px) and (max-width: 594px) {
+    .hero-background {
+        background-image: url('https://cdn.decorilla.com/images/5200/ad2994c4-85a1-4343-8794-574df63375fc/Decorilla-online-interior-design-services.jpeg?cv=1&crop=4160%2C2913%2C520%2C0&width=594');
+    }
+}
+
+@media (min-width: 595px) and (max-width: 743px) {
+    .hero-background {
+        background-image: url('https://cdn.decorilla.com/images/5200/ad2994c4-85a1-4343-8794-574df63375fc/Decorilla-online-interior-design-services.jpeg?cv=1&width=743');
+    }
+}
+
+@media (min-width: 744px) and (max-width: 891px) {
+    .hero-background {
+        background-image: url('https://cdn.decorilla.com/images/5200/ad2994c4-85a1-4343-8794-574df63375fc/Decorilla-online-interior-design-services.jpeg?cv=1&width=891');
+    }
+}
+
+@media (min-width: 892px) and (max-width: 1189px) {
+    .hero-background {
+        background-image: url('https://cdn.decorilla.com/images/5200/ad2994c4-85a1-4343-8794-574df63375fc/Decorilla-online-interior-design-services.jpeg?cv=1&width=1189');
+    }
+}
+
+@media (min-width: 1190px) and (max-width: 1486px) {
+    .hero-background {
+        background-image: url('https://cdn.decorilla.com/images/5200/ad2994c4-85a1-4343-8794-574df63375fc/Decorilla-online-interior-design-services.jpeg?cv=1&width=1486');
+    }
+}
+
+@media (min-width: 1487px) and (max-width: 1783px) {
+    .hero-background {
+        background-image: url('https://cdn.decorilla.com/images/5200/ad2994c4-85a1-4343-8794-574df63375fc/Decorilla-online-interior-design-services.jpeg?cv=1&width=1783');
+    }
+}
+
+@media (min-width: 1784px) and (max-width: 2080px) {
+    .hero-background {
+        background-image: url('https://cdn.decorilla.com/images/5200/ad2994c4-85a1-4343-8794-574df63375fc/Decorilla-online-interior-design-services.jpeg?cv=1&crop=2080%2C2913%2C1560%2C0');
+    }
+}
+
+@media (min-width: 2081px) and (max-width: 2229px) {
+    .hero-background {
+        background-image: url('https://cdn.decorilla.com/images/5200/ad2994c4-85a1-4343-8794-574df63375fc/Decorilla-online-interior-design-services.jpeg?cv=1&width=2229');
+    }
+}
+
+@media (min-width: 2230px) and (max-width: 2674px) {
+    .hero-background {
+        background-image: url('https://cdn.decorilla.com/images/5200/ad2994c4-85a1-4343-8794-574df63375fc/Decorilla-online-interior-design-services.jpeg?cv=1&width=2674');
+    }
+}
+
+@media (min-width: 2675px) and (max-width: 2971px) {
+    .hero-background {
+        background-image: url('https://cdn.decorilla.com/images/5200/ad2994c4-85a1-4343-8794-574df63375fc/Decorilla-online-interior-design-services.jpeg?cv=1&width=2971');
+    }
+}
+
+@media (min-width: 2972px) and (max-width: 3120px) {
+    .hero-background {
+        background-image: url('https://cdn.decorilla.com/images/5200/ad2994c4-85a1-4343-8794-574df63375fc/Decorilla-online-interior-design-services.jpeg?cv=1&crop=3120%2C2913%2C1040%2C0');
+    }
+}
+
+@media (min-width: 3121px) and (max-width: 3566px) {
+    .hero-background {
+        background-image: url('https://cdn.decorilla.com/images/5200/ad2994c4-85a1-4343-8794-574df63375fc/Decorilla-online-interior-design-services.jpeg?cv=1&width=3566');
+    }
+}
+
+@media (min-width: 3567px) and (max-width: 4160px) {
+    .hero-background {
+        background-image: url('https://cdn.decorilla.com/images/5200/ad2994c4-85a1-4343-8794-574df63375fc/Decorilla-online-interior-design-services.jpeg?cv=1');
+    }
+}
+
+@media (min-width: 4161px) {
+    .hero-background {
+        background-image: url('https://cdn.decorilla.com/images/5200/ad2994c4-85a1-4343-8794-574df63375fc/Decorilla-online-interior-design-services.jpeg?cv=1');
+    }
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3rem;
+        margin-bottom: var(--spacing-xl);
+    }
+    
+    .hero-cta {
+        margin-bottom: var(--spacing-2xl);
+    }
+    
+    .hero-cta .btn {
+        padding: var(--spacing-md) var(--spacing-2xl);
+        font-size: var(--fs-base);
+    }
+    
+    .forbes-badge {
+        bottom: var(--spacing-lg);
+        left: var(--spacing-lg);
+        padding: var(--spacing-sm) var(--spacing-md);
+        min-width: 60px;
+    }
+    
+    .badge-number {
+        font-size: var(--fs-2xl);
+    }
+    
+    .badge-text {
+        font-size: var(--fs-xs);
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-cta .btn {
+        padding: var(--spacing-sm) var(--spacing-xl);
+        font-size: var(--fs-sm);
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .forbes-badge {
+        bottom: var(--spacing-md);
+        left: var(--spacing-md);
+    }
+}
+
+/* Navigation adjustments for hero */
+@media (min-width: 992px) {
+    .navbar {
+        padding: var(--spacing-xl) 0;
+    }
+}
+
+/* Animation for hero elements */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-title,
+.hero-cta,
+.forbes-badge {
+    animation: fadeInUp 0.8s ease-out;
+    animation-fill-mode: both;
+}
+
+.hero-cta {
+    animation-delay: 0.2s;
+}
+
+.forbes-badge {
+    animation-delay: 0.4s;
+}
