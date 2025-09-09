@@ -1,0 +1,6 @@
+@media (max-width: 768px) {
+
+    .badge-text {
+        font-size: 0.6rem !important;
+    }
+}

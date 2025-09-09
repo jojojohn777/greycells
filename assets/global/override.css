@@ -1,0 +1,25 @@
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after,
+.navbar-toggler-icon {
+    background: var(--primary-color);
+    height: 3px;
+    border-radius: 2px;
+    transition: all var(--transition-normal);
+    background: unset;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+    transform: unset;
+    bottom: 0;
+    background: var(--primary-color);
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+    transform: unset;
+    bottom: 0;
+    background: var(--primary-color);
+}
+
+.hero-badge {
+    margin-top: 80px;
+}
