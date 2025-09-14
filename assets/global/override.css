@@ -23,3 +23,17 @@
 .hero-badge {
     margin-top: 80px;
 }
+
+.vision-item {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.vision-content {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;ggggggggggggggggggggggg
+}
