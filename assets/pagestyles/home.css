@@ -978,3 +978,28 @@ html {
   /* text-underline-offset: unset; */
   text-decoration: unset;
 }
+.badge-text {
+  background: var(--white);
+  color: var(--primary-color);
+  padding: 19px 53px;
+  border-radius: 50px;
+  font-weight: 653;
+  font-size: 0.9rem;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--primary-alpha);
+  font-size: 16px !important;
+}
+@media screen and (max-width: 480px) {
+.badge-text {
+  background: unset;
+  color: var(--primary-color);
+  padding: 19px 53px;
+  border-radius: 50px;
+  font-weight: 653;
+  font-size: 0.9rem;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--primary-alpha);
+  font-size: 12px !important;
+  display: inline;
+}
+}
