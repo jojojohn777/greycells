@@ -35,5 +35,14 @@
     display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;ggggggggggggggggggggggg
+  flex-direction: column;
+}
+
+@media (max-width: 767.98px) {
+  .vision-item {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
 }
