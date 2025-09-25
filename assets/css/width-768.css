@@ -16,4 +16,9 @@
         width: max-content;
         display: block;
       }
+
+      .vision-content  .vision-item {
+        display: flex;
+        justify-content: center;
+      }
 }

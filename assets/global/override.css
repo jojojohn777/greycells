@@ -25,6 +25,7 @@
 }
 
 .vision-item {
+  display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
@@ -40,6 +41,7 @@
 
 @media (max-width: 767.98px) {
   .vision-item {
+    display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;

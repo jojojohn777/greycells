@@ -274,11 +274,6 @@ body {
   padding: 2rem 0;
 }
 
-.vision-item {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 3rem;
-}
 
 .vision-number {
   background: linear-gradient(135deg, var(--primary-color), var(--primary-light));

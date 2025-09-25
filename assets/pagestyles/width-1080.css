@@ -1,0 +1,18 @@
+@media (max-width: 1080px) {
+
+.vision-item {
+  display: flex;
+  align-items: flex-center;
+  margin-bottom: 3rem;
+}
+.vision-content {
+    display: flex;
+    justify-content: center;
+}
+.vision-wrap {
+    display: flex;
+  margin: 40px 0px;
+  width: max-content;
+  justify-content: stretch;
+}
+}
