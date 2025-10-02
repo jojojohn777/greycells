@@ -21,4 +21,10 @@
         display: flex;
         justify-content: center;
       }
+      #navbarNav {
+        width: 100vw;
+      }
+      .badge-text {
+  background: rgba(255, 255, 255, 0.71) !important;
+}
 }

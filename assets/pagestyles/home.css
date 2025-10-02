@@ -54,6 +54,13 @@ body {
   overflow-x: hidden;
 }
 
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+}
+
 /* Custom Button Styles */
 .btn-brand {
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
