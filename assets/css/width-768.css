@@ -1,30 +1,49 @@
 @media (max-width: 768px) {
 
-    .badge-text {
-        font-size: 0.5rem !important;
-        padding: 6px 14px;
-    }
-    .badge-text {
-        background: var(--white);
-        color: var(--primary-color);
-        padding: 12px 24px;
-        border-radius: 4.5px;
-        font-weight: 600;
-        font-size: 0.9rem;
-        box-shadow: var(--shadow-md);
-        border: 1px solid var(--primary-alpha);
-        width: max-content;
-        display: block;
-      }
+  .badge-text {
+    font-size: 0.5rem !important;
+    padding: 6px 14px;
+  }
 
-      .vision-content  .vision-item {
-        display: flex;
-        justify-content: center;
-      }
-      #navbarNav {
-        width: 100vw;
-      }
-      .badge-text {
-  background: rgba(255, 255, 255, 0.71) !important;
-}
+  .badge-text {
+    background: var(--white);
+    color: var(--primary-color);
+    padding: 12px 24px;
+    border-radius: 4.5px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--primary-alpha);
+    width: max-content;
+    display: block;
+  }
+
+  .vision-content .vision-item {
+    display: flex;
+    justify-content: center;
+  }
+
+  #navbarNav {
+    width: 100vw;
+  }
+
+  .badge-text {
+    background: rgba(255, 255, 255, 0.71) !important;
+  }
+
+
+
+
+  .vision-wrap .vision-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    max-width: 260px !important;
+  }
+  .vision-wrap {
+    width: 80vw !important;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }

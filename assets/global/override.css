@@ -1,39 +1,39 @@
 .navbar-toggler-icon::before,
 .navbar-toggler-icon::after,
 .navbar-toggler-icon {
-    background: var(--primary-color);
-    height: 3px;
-    border-radius: 2px;
-    transition: all var(--transition-normal);
-    background: unset;
+  background: var(--primary-color);
+  height: 3px;
+  border-radius: 2px;
+  transition: all var(--transition-normal);
+  background: unset;
 }
 
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
-    transform: unset;
-    bottom: 0;
-    background: var(--primary-color);
+  transform: unset;
+  bottom: 0;
+  background: var(--primary-color);
 }
 
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
-    transform: unset;
-    bottom: 0;
-    background: var(--primary-color);
+  transform: unset;
+  bottom: 0;
+  background: var(--primary-color);
 }
 
 .hero-badge {
-    margin-top: 80px;
+  margin-top: 80px;
 }
 
 .vision-item {
   display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .vision-content {
-    display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -47,4 +47,276 @@
     justify-content: center;
     align-items: center;
   }
+}
+
+/* Social Links Container */
+.social-links {
+  display: flex;
+  gap: 15px;
+  /* Space between icons */
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+/* Individual Social Link */
+.social-link {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  /* Circular icons */
+  background-color: #f1f1f1;
+  /* Light background */
+  color: #333;
+  /* Default icon color */
+  text-decoration: none;
+  transition: all 0.3s ease;
+  /* Smooth transition for hover effects */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow */
+}
+
+/* Icon Styling */
+.social-link i {
+  font-size: 24px;
+  /* Icon size */
+}
+
+/* Tooltip Styling */
+.social-tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  pointer-events: none;
+}
+
+/* Tooltip Arrow */
+.social-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+}
+
+/* Show Tooltip on Hover */
+.social-link:hover .social-tooltip {
+  opacity: 1;
+  visibility: visible;
+  bottom: calc(100% + 8px);
+  /* Slight offset from icon */
+}
+
+/* Platform-Specific Colors and Hover Effects */
+.social-link.youtube {
+  background-color: #ff0000;
+  /* YouTube red */
+  color: #fff;
+}
+
+.social-link.youtube:hover {
+  background-color: #cc0000;
+  /* Darker red on hover */
+  transform: scale(1.1);
+  /* Slight scale-up effect */
+}
+
+.social-link.facebook {
+  background-color: #1877f2;
+  /* Facebook blue */
+  color: #fff;
+}
+
+.social-link.facebook:hover {
+  background-color: #145dbf;
+  /* Darker blue on hover */
+  transform: scale(1.1);
+}
+
+.social-link.instagram {
+  background: radial-gradient(circle at 30% 107%,
+      #fdf497 0%,
+      #fd5949 45%,
+      #d6249f 60%,
+      #285aeb 90%);
+  /* Instagram gradient */
+  color: #fff;
+}
+
+.social-link.instagram:hover {
+  filter: brightness(0.9);
+  /* Slightly darker on hover */
+  transform: scale(1.1);
+}
+
+.social-link.whatsapp {
+  background-color: #25d366;
+  /* WhatsApp green */
+  color: #fff;
+}
+
+.social-link.whatsapp:hover {
+  background-color: #1da851;
+  /* Darker green on hover */
+  transform: scale(1.1);
+}
+
+/* Accessibility: Focus Styles */
+.social-link:focus {
+  outline: 2px solid #333;
+  outline-offset: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .social-link {
+    width: 40px;
+    height: 40px;
+  }
+
+  .social-link i {
+    font-size: 20px;
+  }
+
+  .social-tooltip {
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+}
+
+.contact-info {
+  background-color: unset;
+  /* padding: var(--spacing-2xl); */
+  /* border-radius: var(--border-radius-lg); */
+  /* box-shadow: var(--shadow-md); */
+}
+
+.newsletter-input {
+  width: 100% !important;
+}
+
+/* Alignment CSS for Vision Content */
+.vision-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.vision-left {
+  text-align: left;
+}
+
+.vision-right {
+  text-align: right;
+}
+
+.vision-left .vision-item {
+  align-items: flex-start;
+}
+
+.vision-right .vision-item {
+  align-items: flex-end;
+}
+
+.vision-left .vision-text {
+  text-align: left;
+}
+
+.vision-right .vision-text {
+  text-align: right;
+}
+
+/* Vision Section Alignment */
+.vision-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.vision-content .col-lg-6:first-child {
+  text-align: left;
+}
+
+.vision-content .col-lg-6:first-child .vision-wrap {
+  text-align: left;
+}
+
+.vision-content .col-lg-6:first-child .vision-wrap .vision-item {
+  text-align: left;
+  justify-content: flex-start;
+}
+
+.vision-content .col-lg-6:first-child .section-title {
+  text-align: left;
+}
+
+.vision-content .col-lg-6:last-child {
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.vision-wrap .vision-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.vision-wrap .vision-number {
+  flex-shrink: 0;
+}
+
+.vision-wrap .vision-text {
+  text-align: left;
+}
+
+.vision-wrap {
+  width: 100vw;
+  flex-direction: row;
+  gap: 2rem;
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  padding: 2rem;
+  width: 100%;
+}
+
+.vision-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.vision-wrap .vision-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  max-width: 320px !important;
+}
+
+.vision-wrap {
+  width: 100vw !important;
+  flex-direction: row;
+  justify-content: space-around;
 }
